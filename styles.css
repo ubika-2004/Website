@@ -64,17 +64,3 @@
   0%,100%{transform:translate3d(0,0,0) rotate(0deg)}
   50%{transform:translate3d(15px,-22px,0) rotate(18deg)}
 }
-
-.intro-screen{position:fixed;inset:0;z-index:100000;display:grid;place-items:center;background:#fcfaf7;color:#29242b;overflow:hidden;transition:opacity .7s ease,visibility .7s ease}
-.intro-screen::before,.intro-screen::after{content:"";position:absolute;border-radius:50%;filter:blur(35px);opacity:.35}
-.intro-screen::before{width:35vw;height:35vw;background:#ddd4fa;left:-12vw;top:15vh;animation:introBlob 5s ease-in-out infinite alternate}
-.intro-screen::after{width:30vw;height:30vw;background:#f8d7cf;right:-10vw;bottom:5vh;animation:introBlob 6s ease-in-out infinite alternate-reverse}
-.intro-screen.hide{opacity:0;visibility:hidden;pointer-events:none}
-.intro-flower{position:absolute;font-size:72px;color:#8f7bc8;opacity:0;animation:introFlower 1.1s cubic-bezier(.2,.8,.2,1) .15s forwards}
-.intro-word{position:relative;z-index:2;font:600 clamp(58px,10vw,105px) "Playfair Display",serif;font-style:italic;opacity:0;transform:translateY(18px);animation:introWord .9s ease .35s forwards}
-.intro-word span{font:normal 16px "DM Sans";color:#9b8bdb;margin-left:4px}
-.intro-line{position:absolute;width:0;height:1px;background:#b9acd9;top:58%;animation:introLine 1s ease .65s forwards}
-.intro-screen p{position:absolute;top:61%;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:#8a818c;opacity:0;animation:introText .7s ease .8s forwards}
-@keyframes introFlower{0%{opacity:0;transform:scale(.4) rotate(-25deg)}70%{opacity:1;transform:scale(1.2) rotate(12deg)}100%{opacity:.9;transform:scale(1) rotate(0)}}
-@keyframes introWord{to{opacity:1;transform:translateY(0)}} @keyframes introLine{to{width:180px}} @keyframes introText{to{opacity:1}} @keyframes introBlob{to{transform:translate3d(5vw,-4vh,0) scale(1.12)}}
-@media(max-width:700px){.intro-line{top:57%}.intro-screen p{top:60%}}
