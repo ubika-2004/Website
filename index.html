@@ -1,106 +1,121 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Uvika — independent UI/UX, product and visual designer working worldwide." />
-  <title>Uvika — Digital Designer</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="OVEQRA — a friendly digital studio for websites, UI/UX, product design and brand experiences.">
+<meta name="theme-color" content="#faf9f6">
+<title>OVEQRA — Digital Studio</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap');
+:root{--bg:#fcfaf7;--card:#fff;--ink:#27272a;--muted:#73737a;--line:#e9e6e1;--lav:#eee9ff;--blue:#e6f1ff;--mint:#e4f5ed;--peach:#ffe8df;--yellow:#fff3d6;--pink:#fbe7ef;--accent:#718879;--accent2:#9b86d7;--shadow:0 14px 45px #4d4b4312;--radius:24px;--max:1180px}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:"DM Sans",sans-serif;color:var(--ink);background:var(--bg);line-height:1.5}a{text-decoration:none;color:inherit}button,input,textarea,select{font:inherit}.wrap{width:min(var(--max),92vw);margin:auto}
+header{height:78px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);position:sticky;top:0;background:#faf9f6ed;backdrop-filter:blur(14px);z-index:50}.logo{font-size:24px;font-weight:700;letter-spacing:-1px}.logo span{color:var(--accent)}nav{display:flex;gap:22px;font-size:12px;color:#5d5d66}nav a:hover{color:var(--accent)}.header-btn{background:var(--ink);color:#fff;padding:11px 17px;border-radius:999px;font-size:12px;font-weight:700}
+.hero{padding:85px 0 80px;display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center}.pill{display:inline-flex;padding:8px 12px;border-radius:999px;background:var(--mint);font-size:11px;font-weight:700;color:#557563;margin-bottom:22px}.hero h1{font-size:clamp(52px,7vw,90px);line-height:.96;letter-spacing:-4px}.hero h1 em,h2 em{font:400 .96em "Instrument Serif";color:var(--accent)}.hero p{font-size:17px;color:var(--muted);max-width:600px;margin:24px 0 28px}.actions{display:flex;gap:10px;flex-wrap:wrap}.btn{border:0;border-radius:999px;padding:14px 20px;cursor:pointer;font-weight:700;font-size:13px;display:inline-flex;align-items:center;gap:8px}.primary{background:var(--ink);color:white}.secondary{border:1px solid var(--line);background:white}
+.hero-art{height:500px;border-radius:36px;background:var(--lav);position:relative;overflow:hidden;box-shadow:var(--shadow)}.orb{position:absolute;border-radius:50%}.orb.one{width:300px;height:300px;background:var(--blue);top:-70px;right:-40px}.orb.two{width:230px;height:230px;background:var(--peach);bottom:-90px;left:-55px}.portrait{position:absolute;width:250px;height:340px;object-fit:cover;left:50%;top:50%;transform:translate(-50%,-50%) rotate(3deg);border-radius:130px 130px 35px 35px;border:8px solid #ffffffb8;box-shadow:0 25px 50px #5c4c8b22}.hero-badge{position:absolute;left:25px;bottom:25px;background:#fff;padding:14px 16px;border-radius:17px;box-shadow:var(--shadow);font-size:11px;font-weight:700}
+.trust{display:flex;justify-content:space-between;gap:20px;align-items:center;border-block:1px solid var(--line);padding:19px 0;color:#7a7a83;font-size:11px}.trust strong{color:var(--ink);font-size:12px}
+section{padding:100px 0}.section-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:40px}.eyebrow{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}h2{font-size:clamp(38px,5vw,66px);line-height:1;letter-spacing:-3px}.section-head>span:last-child{font-size:11px;color:#8c8c94}
+.services{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.service{padding:26px;border:1px solid var(--line);border-radius:var(--radius);background:var(--card);min-height:250px;box-shadow:var(--shadow);transition:.25s}.service:hover,.package:hover,.case:hover{transform:translateY(-5px)}.service:nth-child(1){background:var(--lav)}.service:nth-child(2){background:var(--blue)}.service:nth-child(3){background:var(--mint)}.service:nth-child(4){background:var(--peach)}.service .icon{font-size:25px}.service h3{margin:50px 0 8px;font-size:22px}.service p{font-size:13px;color:var(--muted)}
+.packages{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.package{position:relative;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:27px;box-shadow:var(--shadow);display:flex;flex-direction:column;min-height:535px;transition:.25s}.package:nth-child(1){background:var(--yellow)}.package:nth-child(2){background:var(--lav)}.package:nth-child(3){background:var(--blue)}.package:nth-child(4){background:var(--mint)}.package.featured{border:2px solid #a99ad9}.popular{position:absolute;top:0;right:0;background:var(--accent);color:#fff;padding:8px 12px;border-radius:0 0 0 14px;font-size:9px;font-weight:800;letter-spacing:.08em}.package-top{display:flex;justify-content:space-between;gap:12px}.package-label{font-size:10px;letter-spacing:.13em;font-weight:800}.package-price{font-size:22px;font-weight:800;white-space:nowrap}.package-price small{font-size:10px;font-weight:700;color:#666}.package h3{font-size:27px;margin:35px 0 8px}.package-intro{font-size:13px;color:var(--muted);min-height:63px}.package ul{list-style:none;margin:20px 0 22px;display:grid;gap:10px;font-size:12px;color:#44454d}.package li:before{content:"✓";font-weight:800;margin-right:8px;color:#718879}.package-btn{margin-top:auto;border:0;border-radius:14px;background:var(--ink);color:#fff;padding:13px 14px;font-size:12px;font-weight:700;cursor:pointer}.package-note{font-size:11px;color:#888;margin-top:15px}
+.cases{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.work-filter{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px}.filter{border:1px solid var(--line);background:#fff;padding:9px 13px;border-radius:999px;font-size:11px;cursor:pointer}.filter.active{background:var(--ink);color:#fff}.case{background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);cursor:pointer;transition:.25s}.case img{width:100%;height:250px;object-fit:cover;object-position:center top;display:block}.case-info{padding:20px}.case-info small{font-size:10px;font-weight:700;color:var(--accent);letter-spacing:.1em}.case-info h3{font-size:24px;margin:5px 0}.case-info p{font-size:13px;color:var(--muted)}
+.process{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}.step{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px;min-height:230px}.step:nth-child(1){background:var(--yellow)}.step:nth-child(2){background:var(--lav)}.step:nth-child(3){background:var(--blue)}.step:nth-child(4){background:var(--mint)}.step b{font-size:11px;color:#777}.step h3{margin:65px 0 8px;font-size:22px}.step p{font-size:13px;color:var(--muted)}
+.about{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px;align-items:center}.about-img{height:510px;position:relative}.about-img img{position:absolute;width:250px;height:350px;object-fit:cover;border-radius:30px;box-shadow:var(--shadow)}.about-img img:first-child{left:5%;top:10px;transform:rotate(-5deg)}.about-img img:last-child{right:3%;bottom:10px;transform:rotate(5deg);border:8px solid var(--bg)}.about-copy p{font-size:17px;color:var(--muted);margin:20px 0}.tags{display:flex;gap:7px;flex-wrap:wrap}.tags span{background:#fff;border:1px solid var(--line);padding:8px 12px;border-radius:999px;font-size:11px}
+.team{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.person{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:27px;min-height:260px}.avatar{height:65px;width:65px;border-radius:50%;display:grid;place-items:center;font-weight:700;font-size:20px;background:var(--lav);margin-bottom:40px}.person:nth-child(2) .avatar{background:var(--mint)}.person:nth-child(3) .avatar{background:var(--peach)}.person h3{font-size:23px}.role{font-size:10px;color:var(--accent);font-weight:700;text-transform:uppercase;letter-spacing:.1em;margin:4px 0 12px}.person p{font-size:13px;color:var(--muted)}
+.contact{background:var(--lav);border-radius:35px;padding:60px;display:grid;grid-template-columns:1fr .65fr;gap:50px}.contact p{color:var(--muted);margin:18px 0 25px;max-width:600px}.form{display:grid;gap:11px}.form input,.form textarea,.form select{width:100%;border:1px solid #ddd8e9;background:#fff;border-radius:14px;padding:13px 14px;outline:none}.form input:focus,.form textarea:focus,.form select:focus{border-color:var(--accent)}.form textarea{min-height:105px;resize:vertical}.form button{background:var(--ink);color:#fff;border:0;border-radius:14px;padding:14px;font-weight:700;cursor:pointer}.status{font-size:12px;color:#4b6c57;min-height:18px}
+footer{padding:30px 0 45px;border-top:1px solid var(--line);display:flex;justify-content:space-between;color:#7b7b84;font-size:11px}.footer-logo{font-weight:700;color:var(--ink);font-size:18px}
+.modal{position:fixed;inset:0;background:#25232d66;backdrop-filter:blur(8px);display:none;align-items:center;justify-content:center;padding:20px;z-index:100}.modal.open{display:flex}.modal-card{background:#fff;width:min(900px,95vw);max-height:90vh;overflow:auto;border-radius:28px;position:relative}.modal-card img{width:100%;display:block}.modal-body{padding:26px}.close{position:absolute;right:16px;top:16px;border:0;background:#fff;width:38px;height:38px;border-radius:50%;cursor:pointer;font-size:20px;box-shadow:var(--shadow)}
+@media(max-width:1100px){.packages{grid-template-columns:1fr 1fr}}@media(max-width:900px){nav{display:none}.hero,.about,.contact{grid-template-columns:1fr}.hero-art{height:420px}.services{grid-template-columns:1fr 1fr}.cases{grid-template-columns:1fr 1fr}.process{grid-template-columns:1fr 1fr}.team{grid-template-columns:1fr}}
+@media(max-width:560px){#contact .form>div{grid-template-columns:1fr!important}.packages{grid-template-columns:1fr}.package{min-height:auto}.package-intro{min-height:auto}.hero{padding-top:55px}.hero h1{letter-spacing:-2px}.hero-art{height:340px}.portrait{width:185px;height:260px}.services,.cases,.process{grid-template-columns:1fr}.section-head{align-items:start;flex-direction:column;gap:8px}.contact{padding:28px}.about-img{height:430px}.about-img img{width:190px;height:275px}.trust{flex-wrap:wrap}.header-btn{padding:9px 12px}footer{flex-wrap:wrap;gap:10px}}
+
+/* Soft flower pointer — subtle, not distracting */
+.flower-cursor{position:fixed;left:0;top:0;width:30px;height:30px;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);opacity:0;transition:opacity .2s ease,transform .12s ease;filter:drop-shadow(0 5px 10px #71887925)}
+.flower-cursor span,.flower-cursor i,.flower-cursor b,.flower-cursor em{position:absolute;width:10px;height:14px;background:#c8b9ee;border-radius:70% 70% 55% 55%;left:10px;top:1px;transform-origin:5px 14px}
+.flower-cursor i{transform:rotate(90deg)}.flower-cursor b{transform:rotate(180deg)}.flower-cursor em{transform:rotate(270deg)}
+.flower-cursor small{position:absolute;width:12px;height:12px;left:9px;top:9px;border-radius:50%;background:#f4c98d}
+.flower-cursor strong{position:absolute;width:5px;height:5px;left:12.5px;top:12.5px;border-radius:50%;background:#fff}
+.flower-cursor.hover{transform:translate(-50%,-50%) scale(1.28)}
+@media (pointer:coarse){.flower-cursor{display:none}}
+</style>
 </head>
 <body>
-  <div class="ambient" aria-hidden="true"><div class="ambient-mint"></div></div>
-  <div class="floating-flower f1" aria-hidden="true">✣</div>
-  <div class="floating-flower f2" aria-hidden="true">✣</div>
-  <div class="floating-flower f3" aria-hidden="true">✣</div>
-  <div class="cursor-spark" aria-hidden="true">✦</div>
-  <div class="grain"></div>
-  <div class="site-shell">
-    <div class="topline"><span>AVAILABLE FOR FREELANCE</span><span class="spark">✦</span><span>INDIA ↔ WORLDWIDE</span><span class="top-pill">LET'S MAKE IT GOOD</span></div>
+<div class="flower-cursor" aria-hidden="true"><span></span><i></i><b></b><em></em><small></small><strong></strong></div>
+<header class="wrap">
+<a class="logo" href="#home">OVE<span>Q</span>RA</a>
+<nav><a href="#services">Services</a><a href="#packages">Packages</a><a href="#work">Work</a><a href="#process">Process</a><a href="#about">About</a><a href="#team">Team</a></nav>
+<a class="header-btn" href="#contact">Start a project ↗</a>
+</header>
 
-    <header class="nav-wrap">
-      <a class="brand" href="#home"><span>U</span>vika<sup>®</sup></a>
-      <nav class="nav" aria-label="Primary navigation">
-        <a href="#work">Work</a><a href="#services">Services</a><a href="#about">About</a><a href="#pricing">Rates</a>
-        <button class="nav-cta" data-open-inquiry>Hire me <span>↗</span></button>
-      </nav>
-      <button class="menu-btn" aria-label="Open navigation" aria-expanded="false"><i></i><i></i><i></i></button>
-    </header>
+<main id="home">
+<section class="hero wrap">
+<div>
+<span class="pill">✦ DIGITAL STUDIO · INDIA 🇮🇳 ↔ WORLDWIDE 🌎</span>
+<h1>Digital experiences,<br><em>built for anywhere.</em></h1>
+<p>OVEQRA creates friendly, useful and memorable digital products for ambitious businesses — from India to anywhere in the world.</p>
+<div class="actions"><a class="btn primary" href="#contact">Tell us your idea ↗</a><a class="btn secondary" href="#work">Explore our work ↓</a></div>
+</div>
+<div class="hero-art"><div class="orb one"></div><div class="orb two"></div><img class="portrait" src="assets/founder-01.jpeg" alt="OVEQRA creative team"><div class="hero-badge">DESIGN · PRODUCT · BUSINESS</div></div>
+</section>
+<div class="trust wrap"><strong>OVEQRA</strong><span>UI/UX</span><span>WEB</span><span>PRODUCT</span><span>BRAND</span><span>STRATEGY</span></div>
 
-    <main id="home">
-      <section class="hero section">
-        <div class="hero-left">
-          <div class="mini-stamp">UI/UX <b>+</b> PRODUCT <b>+</b> WEB</div>
-          <p class="eyebrow">HELLO, I'M UVIKA — NICE TO MEET YOU</p>
-          <h1>Ideas are messy.<br><span>I make them <em>click.</em></span></h1>
-          <p class="hero-copy">I design digital products, websites and interfaces that feel clear, human and a little bit unforgettable.</p>
-          <div class="hero-buttons"><a class="btn btn-dark" href="#work">See the work <span>↓</span></a><button class="btn btn-soft" data-open-inquiry>Start a project <span>↗</span></button></div>
-          <div class="hero-meta"><span><b class="live-dot"></b>Taking new projects</span><span>⌁ Remote-friendly</span><span>✦ USD + INR</span></div>
-        </div>
-        <div class="hero-right">
-          <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div>
-          <div class="shape shape-star">✦</div><div class="shape shape-heart">♡</div><div class="shape shape-dot"></div>
-          <div class="portrait-wrap"><div class="portrait-card"><img src="assets/uvika-blazer.png" alt="Uvika in a black blazer" /></div><div class="portrait-label">designer<br><strong>at work.</strong></div></div>
-          <div class="floating-note note-one"><span>01</span><strong>Think</strong><small>before pixels</small></div>
-          <div class="floating-note note-two"><span>02</span><strong>Make</strong><small>it feel easy</small></div>
-        </div>
-      </section>
+<section class="wrap" id="services"><div class="section-head"><div><div class="eyebrow">01 / SERVICES</div><h2>What can we <em>build?</em></h2></div><span>Clear services. No confusing jargon.</span></div>
+<div class="services">
+<article class="service"><div class="icon">✦</div><h3>UI/UX Design</h3><p>User flows, wireframes, high-fidelity interfaces, prototypes and design systems.</p></article>
+<article class="service"><div class="icon">◌</div><h3>Websites</h3><p>Responsive business websites that are easy to navigate, understand and use.</p></article>
+<article class="service"><div class="icon">⌁</div><h3>Product Design</h3><p>Turn an idea into a structured digital product with a clear user experience.</p></article>
+<article class="service"><div class="icon">♡</div><h3>Brand & Visuals</h3><p>Visual identity, typography, colour systems and assets that make a brand feel consistent.</p></article>
+</div></section>
 
-      <section class="ticker" aria-label="Capabilities"><div class="ticker-track">UI/UX DESIGN <b>✦</b> PRODUCT THINKING <b>✦</b> WEB DESIGN <b>✦</b> MOBILE EXPERIENCES <b>✦</b> VISUAL SYSTEMS <b>✦</b> HUMAN-FIRST DESIGN <b>✦</b> UI/UX DESIGN <b>✦</b> PRODUCT THINKING <b>✦</b></div></section>
+<section class="wrap" id="packages"><div class="section-head"><div><div class="eyebrow">02 / PACKAGES</div><h2>Choose what <em>fits you.</em></h2></div><span>Starting prices · INR / USD · custom quotes available</span></div>
+<div class="packages">
+<article class="package"><div class="package-top"><span class="package-label">STARTER</span><span class="package-price">₹12k+ <small>/ $150+</small></span></div><h3>Launch Kit</h3><p class="package-intro">For small businesses and new ideas that need a clean digital presence.</p><ul><li>1 responsive business website</li><li>Up to 5 core pages</li><li>Basic UI/UX structure</li><li>Mobile + desktop responsive design</li><li>Contact / inquiry form</li><li>1 revision round</li></ul><button class="package-btn" data-package="Launch Kit — ₹12k+">Choose Launch Kit ↗</button></article>
+<article class="package featured"><div class="popular">MOST POPULAR</div><div class="package-top"><span class="package-label">GROWTH</span><span class="package-price">₹25k+ <small>/ $300+</small></span></div><h3>Growth Experience</h3><p class="package-intro">For brands that want a stronger website, better UX and a more polished identity.</p><ul><li>Custom responsive website</li><li>Up to 8 pages</li><li>UI/UX + user-flow planning</li><li>Interactive prototype / micro-interactions</li><li>Basic design system</li><li>Contact / inquiry flow</li><li>2 revision rounds</li></ul><button class="package-btn" data-package="Growth Experience — ₹25k+">Choose Growth ↗</button></article>
+<article class="package"><div class="package-top"><span class="package-label">PREMIUM</span><span class="package-price">₹45k+ <small>/ $550+</small></span></div><h3>Product Build</h3><p class="package-intro">For startups and businesses building a complete digital product experience.</p><ul><li>End-to-end product UI/UX</li><li>Website or web-app experience</li><li>User research + flows</li><li>High-fidelity screens</li><li>Prototype + design system</li><li>Developer handoff</li><li>3 revision rounds</li></ul><button class="package-btn" data-package="Product Build — ₹45k+">Choose Product Build ↗</button></article>
+<article class="package"><div class="package-top"><span class="package-label">CUSTOM</span><span class="package-price">Quote</span></div><h3>Made For You</h3><p class="package-intro">Need an app, dashboard, e-commerce store, branding or something more complex?</p><ul><li>Custom scope & deliverables</li><li>Website / app / dashboard</li><li>Branding & visual identity</li><li>Advanced UX requirements</li><li>Ongoing design support</li><li>Priority project planning</li></ul><button class="package-btn" data-package="Custom Project — Quote required">Discuss custom project ↗</button></article>
+</div><p class="package-note">*Starting estimates shown in INR / USD. Final pricing depends on scope, complexity, integrations, content, timeline and client location.</p></section>
 
-      <section class="section intro-grid">
-        <div class="section-number">01 / <span>THE VIBE</span></div>
-        <div class="intro-main"><p class="eyebrow">NOT JUST PRETTY SCREENS</p><h2>Design with a brain.<br><em>Styled with a soul.</em></h2><p>I like clean interfaces, smart flows, tiny details and brands that don't look like everybody else. My sweet spot is where usability and personality meet.</p><div class="micro-stats"><div><strong>03</strong><span>featured<br>case studies</span></div><div><strong>∞</strong><span>curiosity<br>level</span></div><div><strong>2</strong><span>payment<br>modes</span></div></div></div>
-        <div class="quote-tile"><span>“</span><p>Tell me the weird idea.<br><strong>We'll make it work.</strong></p><small>— Uvika, probably over coffee</small></div>
-      </section>
+<section class="wrap" id="work"><div class="section-head"><div><div class="eyebrow">03 / WORK</div><h2>Things we've <em>designed.</em></h2></div><span>Tap any project for details.</span></div>
+<div class="work-filter"><button class="filter active" data-filter="all">All</button><button class="filter" data-filter="app">Mobile App</button><button class="filter" data-filter="web">Web</button><button class="filter" data-filter="dashboard">Dashboard</button></div>
+<div class="cases">
+<article class="case" data-type="app" data-title="Blissful Delight" data-desc="Coffee ordering mobile app UI/UX focused on comfort, discovery and a simple ordering flow." data-img="assets/case-study-01.png"><img src="assets/case-study-01.png" alt="Blissful Delight case study"><div class="case-info"><small>CASE STUDY 01 · MOBILE APP</small><h3>Blissful Delight</h3><p>Coffee ordering app · UI/UX Design</p></div></article>
+<article class="case" data-type="web" data-title="Travelia" data-desc="Modern travel website experience for discovering, planning and booking trips." data-img="assets/case-study-02.png"><img src="assets/case-study-02.png" alt="Travelia case study"><div class="case-info"><small>CASE STUDY 02 · WEBSITE</small><h3>Travelia</h3><p>Travel platform · UI/UX Design</p></div></article>
+<article class="case" data-type="dashboard" data-title="FinWise" data-desc="Personal finance dashboard designed to make financial health, spending and goals easier to understand." data-img="assets/case-study-03.png"><img src="assets/case-study-03.png" alt="FinWise case study"><div class="case-info"><small>CASE STUDY 03 · DASHBOARD</small><h3>FinWise</h3><p>Finance dashboard · Data Visualization</p></div></article>
+</div></section>
 
-      <section class="section work" id="work">
-        <div class="section-top"><div><div class="section-number">02 / <span>SELECTED WORK</span></div><h2>A few things<br><em>I've made.</em></h2></div><div class="filter-row"><button class="filter active" data-filter="all">All</button><button class="filter" data-filter="app">Mobile</button><button class="filter" data-filter="web">Web</button><button class="filter" data-filter="dashboard">Dashboard</button></div></div>
-        <div class="bento-grid">
-          <article class="work-card work-a" data-category="app"><div class="work-img"><img src="assets/blissful-delight.png" alt="Blissful Delight coffee app" /><span class="corner-no">01</span></div><div class="work-info"><div><span>Mobile app · UI/UX</span><h3>Blissful Delight</h3></div><span class="arrow-chip">↗</span></div></article>
-          <article class="work-card work-b" data-category="web"><div class="work-img"><img src="assets/travelia.png" alt="Travelia travel website" /><span class="corner-no">02</span></div><div class="work-info"><div><span>Website · Responsive</span><h3>Travelia</h3></div><span class="arrow-chip">↗</span></div></article>
-          <article class="work-card work-c" data-category="dashboard"><div class="work-img"><img src="assets/finwise.png" alt="FinWise finance dashboard" /><span class="corner-no">03</span></div><div class="work-info"><div><span>Dashboard · Data viz</span><h3>FinWise</h3></div><span class="arrow-chip">↗</span></div></article>
-          <div class="tiny-case"><span>MORE<br>COMING<br>SOON</span><i>✦</i></div>
-        </div>
-        <p class="honest-note">Concept projects are presented honestly as case studies — no fake client claims, no invented results.</p>
-      </section>
+<section class="wrap" id="process"><div class="section-head"><div><div class="eyebrow">04 / PROCESS</div><h2>Simple from <em>start to finish.</em></h2></div></div>
+<div class="process"><div class="step"><b>01 · DISCOVER</b><h3>Understand</h3><p>We learn about your idea, audience, goals and the actual problem.</p></div><div class="step"><b>02 · PLAN</b><h3>Structure</h3><p>We map the experience, user flow and priorities before visual design.</p></div><div class="step"><b>03 · CREATE</b><h3>Design</h3><p>We build the interface, visual system and prototype around the strategy.</p></div><div class="step"><b>04 · REFINE</b><h3>Launch-ready</h3><p>We test, simplify and prepare the final experience for real users.</p></div></div></section>
 
-      <section class="section services" id="services">
-        <div class="section-number">03 / <span>WHAT I DO</span></div>
-        <div class="service-heading"><h2>Pick your <em>problem.</em><br>I'll bring the design.</h2><p>Need a whole product? A website glow-up? A landing page that actually converts? Yep, all of it.</p></div>
-        <div class="service-list">
-          <button class="service-row lavender" data-service="UI/UX Design"><span class="service-num">01</span><span class="service-title">UI/UX Design</span><span class="service-desc">Flows, wireframes, high-fidelity screens & prototypes</span><b>↗</b></button>
-          <button class="service-row peach" data-service="Web Design"><span class="service-num">02</span><span class="service-title">Web Design</span><span class="service-desc">Responsive websites with a strong visual direction</span><b>↗</b></button>
-          <button class="service-row mint" data-service="Mobile App Design"><span class="service-num">03</span><span class="service-title">Mobile Apps</span><span class="service-desc">Simple, intuitive experiences people enjoy using</span><b>↗</b></button>
-          <button class="service-row butter" data-service="Product Design"><span class="service-num">04</span><span class="service-title">Product Design</span><span class="service-desc">From messy idea → structured product experience</span><b>↗</b></button>
-          <button class="service-row lilac" data-service="Design Systems"><span class="service-num">05</span><span class="service-title">Design Systems</span><span class="service-desc">Components, tokens & visual rules that scale</span><b>↗</b></button>
-        </div>
-      </section>
+<section class="wrap" id="about"><div class="section-head"><div><div class="eyebrow">05 / ABOUT</div><h2>Human work. <em>Real thinking.</em></h2></div></div>
+<div class="about"><div class="about-img"><img src="assets/founder-02.jpeg" alt="OVEQRA creative"><img src="assets/founder-01.jpeg" alt="OVEQRA creative"></div><div class="about-copy"><p>OVEQRA is a small creative studio built around one idea: digital products should be beautiful enough to remember and simple enough to use.</p><p>Our team combines creative direction, operations and finance/business partnership, so a project isn't just designed well — it is also organised and commercially grounded.</p><div class="tags"><span>Figma</span><span>UI/UX</span><span>Prototyping</span><span>Responsive Web</span><span>Design Systems</span><span>Strategy</span></div></div></div></section>
 
-      <section class="section about" id="about">
-        <div class="about-collage"><div class="about-photo photo-main"><img src="assets/uvika-sweater.png" alt="Uvika in a striped sweater" /></div><div class="about-photo photo-small"><img src="assets/uvika-candid.png" alt="Uvika candid portrait" /></div><div class="about-photo photo-vhs"><img src="assets/uvika-vhs.png" alt="Uvika vintage-style candid" /></div><div class="tape tape-1"></div><div class="tape tape-2"></div><span class="scribble">unfiltered<br><b>& unbothered</b> ✦</span></div>
-        <div class="about-copy"><div class="section-number">04 / <span>THE HUMAN BEHIND IT</span></div><p class="eyebrow">YES, THAT'S ACTUALLY ME</p><h2>Designer by day.<br><em>Professional overthinker.</em></h2><p>I'm Uvika — a UI/UX and visual designer who enjoys turning complicated things into experiences that feel obvious.</p><p>I care about the little things: why a button is there, what happens after the click, whether the copy sounds human, and whether the whole thing feels like <i>you.</i></p><div class="about-tags"><span>Figma</span><span>Prototyping</span><span>UX Research</span><span>Visual Design</span><span>Design Systems</span></div><div class="availability"><span class="live-dot"></span><div><strong>Currently open for freelance</strong><small>Worldwide · Async friendly · INR + USD</small></div></div></div>
-      </section>
+<section class="wrap" id="team"><div class="section-head"><div><div class="eyebrow">06 / TEAM</div><h2>Three roles. <em>One team.</em></h2></div></div>
+<div class="team"><div class="person"><div class="avatar">C</div><h3>Creative</h3><div class="role">Founder · Design & Product</div><p>Creative direction, UI/UX, product thinking and the visual direction of OVEQRA.</p></div><div class="person"><div class="avatar">O</div><h3>Operations</h3><div class="role">Operations · Delivery</div><p>Projects, timelines, communication and systems that keep delivery smooth.</p></div><div class="person"><div class="avatar">F</div><h3>Finance</h3><div class="role">Finance · Partnership</div><p>Financial planning, commercial decisions and business partnership.</p></div></div></section>
 
-      <section class="section process">
-        <div class="process-intro"><div class="section-number">05 / <span>HOW IT WORKS</span></div><h2>No mystery.<br><em>Just a good process.</em></h2><p>You'll always know what we're doing, why we're doing it and what happens next.</p></div>
-        <div class="process-stack"><div class="process-card p1"><span>01</span><h3>Listen</h3><p>Goals, audience, context, chaos. Bring it all.</p></div><div class="process-card p2"><span>02</span><h3>Shape</h3><p>Research, flows and a direction we can agree on.</p></div><div class="process-card p3"><span>03</span><h3>Design</h3><p>Wireframes → UI → prototype → tiny details.</p></div><div class="process-card p4"><span>04</span><h3>Launch</h3><p>Handoff, feedback and a polished final experience.</p></div></div>
-      </section>
+<section class="wrap" id="contact"><div class="contact"><div><div class="eyebrow">07 / START A PROJECT</div><h2>Got an idea? <em>Let's talk.</em></h2><p>Tell us what you are building, what you need help with and roughly when you want to start. Your selected package can be added automatically.</p><p><strong>Email:</strong> hello@oveqra.com</p></div>
+<form class="form" id="projectForm"><input id="name" required placeholder="Your name"><input id="email" required type="email" placeholder="Email address"><input id="company" placeholder="Company / Brand"><div style="display:grid;grid-template-columns:1fr 1fr;gap:11px">
+<select id="country" required><option value="">Where are you based?</option><option>🇮🇳 India</option><option>🌎 International</option></select>
+<select id="currency" required><option value="">Preferred currency</option><option>INR ₹</option><option>USD $</option><option>GBP £</option><option>EUR €</option></select>
+</div><select id="service" required><option value="">What do you need?</option><option>UI/UX Design</option><option>Website</option><option>Product Design</option><option>Brand & Visuals</option><option>Something else</option></select><select id="budget"><option value="">Budget range</option><option>₹10k–₹25k</option><option>₹25k–₹50k</option><option>₹50k–₹1L</option><option>₹1L+</option><option>Not sure yet</option></select><select id="timeline"><option value="">Timeline</option><option>ASAP</option><option>2–4 weeks</option><option>1–2 months</option><option>2+ months</option><option>Flexible</option></select><textarea id="message" required placeholder="Tell us a little about the project..."></textarea><button type="submit">Send project inquiry ↗</button><div class="status" id="formStatus"></div></form></div></section>
+</main>
+<footer class="wrap"><span class="footer-logo">OVEQRA</span><span>Digital studio · India 🇮🇳 ↔ Worldwide 🌎</span><span>© 2026 OVEQRA</span></footer>
 
-      <section class="section world"><div class="world-card"><div class="world-copy"><div class="section-number">06 / <span>WORKING WORLDWIDE</span></div><h2>Different clocks.<br><em>Same creative energy.</em> 🌎</h2><p>I'm based in India and collaborate remotely with people across borders. Domestic or overseas, the process stays simple.</p><div class="world-chips"><span>🇮🇳 India</span><span>🇺🇸 USA</span><span>🇬🇧 UK</span><span>🇨🇦 Canada</span><span>🇦🇪 UAE</span><span>＋ anywhere</span></div></div><div class="world-art"><div class="world-orbit o1"></div><div class="world-orbit o2"></div><div class="world-center">U<br><small>✦</small></div><span class="planet pl1">NYC</span><span class="planet pl2">LON</span><span class="planet pl3">DXB</span><span class="planet pl4">TOR</span></div></div></section>
+<div class="modal" id="modal"><div class="modal-card"><button class="close" id="close">×</button><img id="modalImg" src="" alt=""><div class="modal-body"><div class="eyebrow">CASE STUDY</div><h2 id="modalTitle"></h2><p id="modalDesc" style="color:var(--muted);margin-top:12px"></p><a class="btn primary" href="#contact" id="modalCTA" style="margin-top:18px">Discuss a similar project ↗</a></div></div></div>
+<script>
+const flowerCursor=document.querySelector('.flower-cursor');
+if(flowerCursor && window.matchMedia('(pointer:fine)').matches){
+  let mx=0,my=0,cx=0,cy=0;
+  window.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;flowerCursor.style.opacity='1';});
+  const tick=()=>{cx+=(mx-cx)*.22;cy+=(my-cy)*.22;flowerCursor.style.left=cx+'px';flowerCursor.style.top=cy+'px';requestAnimationFrame(tick)}; tick();
+  document.querySelectorAll('a,button,input,select,textarea,.case,.filter').forEach(el=>{el.addEventListener('mouseenter',()=>flowerCursor.classList.add('hover'));el.addEventListener('mouseleave',()=>flowerCursor.classList.remove('hover'));});
+}
 
-      <section class="section pricing" id="pricing"><div class="section-top"><div><div class="section-number">07 / <span>STARTING RATES</span></div><h2>Choose a lane.<br><em>Let's build.</em></h2></div><div class="currency-switch"><button class="currency active" data-currency="USD">$ USD</button><button class="currency" data-currency="INR">₹ INR</button></div></div><div class="price-grid"><article class="price-card"><span>01 · QUICK WIN</span><h3>Landing Page</h3><strong class="price" data-usd="150" data-inr="12999">$150</strong><small>starting from</small><ul><li>1 responsive page</li><li>UI in Figma</li><li>Prototype</li><li>1 revision round</li></ul><button class="btn btn-soft" data-service="Landing Page">Pick this ↗</button></article><article class="price-card hot"><b class="hot-label">MOST REQUESTED ✦</b><span>02 · PRODUCT UI</span><h3>Mobile App</h3><strong class="price" data-usd="450" data-inr="39999">$450</strong><small>starting from</small><ul><li>Core user flow</li><li>High-fidelity screens</li><li>Interactive prototype</li><li>Design system basics</li></ul><button class="btn btn-dark" data-service="Mobile App Design">Pick this ↗</button></article><article class="price-card"><span>03 · FULL EXPERIENCE</span><h3>Website</h3><strong class="price" data-usd="600" data-inr="54999">$600</strong><small>starting from</small><ul><li>Responsive website UI</li><li>UX flow + wireframes</li><li>Prototype</li><li>Developer handoff</li></ul><button class="btn btn-soft" data-service="Web Design">Pick this ↗</button></article></div><p class="pricing-note">Starting points only — final quote depends on scope, timeline and complexity.</p></section>
-
-      <section class="section final-cta" id="contact"><div class="cta-paper"><div class="sticker">YOUR IDEA<br>+ MY BRAIN<br>= ✦</div><div><div class="section-number">08 / <span>LET'S TALK</span></div><h2>Got something<br><em>in your head?</em></h2><p>Send me the messy version. A voice note. A screenshot. A half-baked idea. We'll figure out the rest.</p><button class="btn btn-dark" data-open-inquiry>Start a project <span>↗</span></button></div><div class="cta-side"><span>INTERNATIONAL</span><strong>USD</strong><span>DOMESTIC</span><strong>INR</strong><small>Quote first.<br>Payment after we agree.</small></div></div></section>
-    </main>
-
-    <footer class="footer"><div class="footer-brand"><a class="brand" href="#home"><span>U</span>vika<sup>®</sup></a><p>Making digital things feel a little more human.</p></div><div class="footer-nav"><a href="#work">Work</a><a href="#services">Services</a><a href="#about">About</a><a href="#pricing">Rates</a></div><div class="footer-contact"><span>LET'S CONNECT</span><a href="mailto:uvikachakraborty2004@gmail.com">uvikachakraborty2004@gmail.com</a><a href="tel:+917004851853">+91 70048 51853</a><div><a href="#">Instagram</a><a href="#">LinkedIn</a><a href="#">Behance</a></div></div><div class="footer-bottom"><span>© <span id="year"></span> Uvika</span><span>Designed with curiosity & too much coffee ☕</span></div></footer>
-  </div>
-
-  <div class="modal" id="inquiryModal" aria-hidden="true"><div class="modal-backdrop" data-close-modal></div><div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="inquiryTitle"><button class="modal-close" data-close-modal>×</button><div class="modal-head"><p class="eyebrow">LET'S WORK TOGETHER</p><h2 id="inquiryTitle">Tell me the messy version.</h2><p>No corporate essay required. Just tell me what you're trying to build. ✦</p></div><form id="inquiryForm"><div class="form-grid"><label>Name<input required name="name" placeholder="Your name"></label><label>Email<input required type="email" name="email" placeholder="you@company.com"></label></div><div class="form-grid"><label>Company / Brand<input name="company" placeholder="Optional"></label><label>Country<select name="country"><option>India</option><option>United States</option><option>United Kingdom</option><option>Canada</option><option>UAE</option><option>Europe</option><option>Other</option></select></label></div><label>What are we making?<select name="service" id="serviceSelect"><option>UI/UX Design</option><option>Web Design</option><option>Mobile App Design</option><option>Product Design</option><option>Design Systems</option><option>Visual Design</option><option>Landing Page</option><option>Other</option></select></label><div class="form-grid"><label>Budget<select name="budget"><option>$150–$500</option><option>$500–$1,000</option><option>$1,000–$2,500</option><option>$2,500+</option><option>₹10k–₹30k</option><option>₹30k–₹60k</option><option>₹60k+</option><option>Not sure yet</option></select></label><label>Timeline<select name="timeline"><option>ASAP</option><option>1–2 weeks</option><option>2–4 weeks</option><option>1–2 months</option><option>Flexible</option></select></label></div><label>Tell me everything<textarea required name="message" rows="5" placeholder="What are you building? What's the problem? What would make this project a win?"></textarea></label><div class="payment-preview"><div><strong>Payment modes</strong><span>Domestic + international checkout can be connected after the quote.</span></div><div class="payment-badges"><span>🇮🇳 INR</span><span>🌎 USD</span><span>🔒 Secure</span></div></div><button class="btn btn-dark submit-btn" type="submit">Send inquiry →</button><p class="form-note" id="formStatus">This version opens your email app. Connect your live payment/backend before launch.</p></form></div></div>
-
-  <script src="script.js"></script>
+const filters=document.querySelectorAll('.filter'),cases=document.querySelectorAll('.case');
+filters.forEach(btn=>btn.addEventListener('click',()=>{filters.forEach(b=>b.classList.remove('active'));btn.classList.add('active');const f=btn.dataset.filter;cases.forEach(c=>c.style.display=(f==='all'||c.dataset.type===f)?'block':'none')}));
+const modal=document.getElementById('modal'),modalImg=document.getElementById('modalImg'),modalTitle=document.getElementById('modalTitle'),modalDesc=document.getElementById('modalDesc');
+cases.forEach(c=>c.addEventListener('click',()=>{modalImg.src=c.dataset.img;modalTitle.textContent=c.dataset.title;modalDesc.textContent=c.dataset.desc;modal.classList.add('open');document.body.style.overflow='hidden'}));
+function closeModal(){modal.classList.remove('open');document.body.style.overflow=''}document.getElementById('close').onclick=closeModal;modal.addEventListener('click',e=>{if(e.target===modal)closeModal()});document.getElementById('modalCTA').onclick=closeModal;
+document.querySelectorAll('.package-btn').forEach(btn=>btn.addEventListener('click',()=>{document.getElementById('service').value='Something else';document.getElementById('message').value='I am interested in the '+btn.dataset.package+'. Please share the exact scope, timeline and final quotation.';document.getElementById('contact').scrollIntoView({behavior:'smooth'});setTimeout(()=>document.getElementById('name').focus(),500)}));
+const form=document.getElementById('projectForm'),status=document.getElementById('formStatus');
+form.addEventListener('submit',e=>{e.preventDefault();const inquiry={id:Date.now(),name:name.value,email:email.value,company:company.value,country:country.value,currency:currency.value,service:service.value,budget:budget.value,timeline:timeline.value,message:message.value,createdAt:new Date().toLocaleString()};const saved=JSON.parse(localStorage.getItem('oveqra_inquiries')||'[]');saved.push(inquiry);localStorage.setItem('oveqra_inquiries',JSON.stringify(saved));status.textContent='Inquiry saved ✓ We will get back to you soon.';form.reset()});
+</script>
 </body>
 </html>
